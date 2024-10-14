@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="Assets/Logo_Name.ico">
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
-    <script src="Assets/leaflet.curve.js"></script>
+    
 </head>
 <body>
     <!--Create Navigation Bar-->
@@ -33,20 +33,41 @@
     <div class="row">
         
         <!-- HTML -->
-    <div class="side" id="sideNav">
-        <button id="loadCorals" class="icon-button">
-            <!--<i class="fa fa-tree" style="font-size:24px;color:#E22726;"></i>-->
-            <img src="Assets/coral-reefs.png" alt="coral reef icon" style="width: 28px;height: 28px;" >
-            <span class="button-text">Coral Reefs</span>
-        </button>
-        <button id="loadProtectedAreas" class="icon-button">
-            <i class="fa fa-paw" style="font-size:24px;color:#32AADE;"></i>
-            <span class="button-text">Protected Areas</span>
-        <button id="loadFishing" class="icon-button">
-            <i class="fa fa-anchor" style="font-size:24px;color:#32AADE;"></i>
-            <span class="button-text">Fishing Grounds</span>
-        </button>
+        <div class="side" id="sideNav">
 
+        <!-- BMUs Toggle -->
+        <label class="wrapper" for="toggleBMUs">
+            <!--<img src="Assets/coral-reefs.png" alt="coral reef icon" style="width: 28px; height: 28px; margin-left: 10px;">-->
+            <i class="fa-solid fa-ship" style="font-size:24px;color:#32AADE;"></i>
+            <span class="icon-button">BMUs</span>
+            <div class="switch-wrap">
+                <input type="checkbox" id="toggleBMUs">
+                <div class="switch"></div>
+            </div>
+            
+        </label>
+        <!-- Fishing Grounds Toggle -->
+        <label class="wrapper" for="toggleFishing">
+            <i class="fa-solid fa-fish" style="font-size:24px;color:#32AADE;"></i>
+            <span class="icon-button">Fishing Grounds</span>
+            <div class="switch-wrap">
+                <input type="checkbox" id="toggleFishing">
+                <div class="switch"></div>
+            </div>
+            
+        </label>
+        <!-- Landing Sites Toggle -->
+        <label class="wrapper" for="toggleLanding">
+            <i class="fa fa-anchor" style="font-size:24px;color:#32AADE;"></i>
+            <span class="icon-button">Landing Sites</span>
+            <div class="switch-wrap">
+                <input type="checkbox" id="toggleLanding">
+                <div class="switch"></div>
+            </div>
+            
+        </label>
+
+        
             <div id="storyLegend" class="story-section">
             <img id="storyImage" src="Assets/Legend_Icon.png" alt= "Impact Story Image">
             <p>Click on a point on the map to see the amazing story of some of our beneficiaries</p>
